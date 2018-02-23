@@ -1,0 +1,33 @@
+{
+  "name": "scorekeeper",
+  "version": "1.0.0",
+  "description": "Scorekeeping app.",
+  "main": "dist/index.js",
+  "author": "Blake Guilloud <blake.guilloud@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint-config-blake": "^1.0.8",
+    "jest": "^21.2.1",
+    "pre-commit": "^1.2.2",
+    "rimraf": "^2.6.2"
+  },
+  "scripts": {
+    "build": "babel lib --out-dir dist",
+    "clean": "rimraf dist",
+    "demo": "npm run build && node demo/index.js",
+    "fix": "eslint ./lib ./test --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint ./lib ./test",
+    "prepublish": "npm run clean && npm run build"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ]
+}
