@@ -1,4 +1,6 @@
-const scorekeeper = require('../dist/index.js');
-const path = require('path');
+const scorekeeper = require('../dist');
 
-console.log(scorekeeper(__dirname, 'scores.txt'));
+const filePath = 'scores.txt';
+const fileDest = 'rank1.txt';
+
+console.log(scorekeeper(__dirname, filePath, fileDest));

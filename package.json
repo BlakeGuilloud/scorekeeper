@@ -5,6 +5,9 @@
   "main": "dist/index.js",
   "author": "Blake Guilloud <blake.guilloud@gmail.com>",
   "license": "MIT",
+  "bin": {
+    "scorekeeper": "dist/program.js"
+  },
   "files": [
     "dist"
   ],
@@ -29,5 +32,9 @@
   "pre-commit": [
     "lint",
     "test"
-  ]
+  ],
+  "dependencies": {
+    "commander": "^2.14.1",
+    "node-emoji": "^1.8.1"
+  }
 }

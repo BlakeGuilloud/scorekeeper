@@ -3,7 +3,7 @@
   "globals": {
     "describe": true,
     "it": true,
-    "expect": true
+    "expect": true,
+    "afterAll": true
   }
-
 }
