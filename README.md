@@ -1,4 +1,7 @@
 ## Scorekeeper
+[![Build Status](https://travis-ci.org/BlakeGuilloud/scorekeeper.svg?branch=master)](https://travis-ci.org/BlakeGuilloud/scorekeeper)
+[![License](https://img.shields.io/npm/l/scorekeeper.svg)](https://img.shields.io/npm/l/scorekeeper.svg)
+[![npm](https://img.shields.io/npm/v/scorekeeper.svg)](https://img.shields.io/npm/v/scorekeeper.svg)
 
 ### Objective
 Scorekeeper is a CLI tool for parsing through a .txt file of tournament scores, calculating rankings, and writing the rankings to a .txt file. It is designed to accept a single .txt file of game scores as input, and output a .txt file of tournament rankings based on the following scoring format:

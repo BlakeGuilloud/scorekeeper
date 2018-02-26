@@ -9,7 +9,7 @@ describe('scorekeeper', () => {
   });
 
   it('should require 2 arguments of Type string', () => {
-    expect(scorekeeper('test/testData/Scores.txt', 'test/testData/rank1.txt', true)).toBeDefined();
+    expect(scorekeeper('test/testData/Scores.txt', 'test/testData/rank1.txt')).toBeDefined();
 
     expect(() => scorekeeper()).toThrow('Invalid arguments provided.');
     expect(() => scorekeeper(1)).toThrow('Invalid arguments provided.');
@@ -17,7 +17,7 @@ describe('scorekeeper', () => {
   });
 
   it('should return a string of rankings', () => {
-    const sut = scorekeeper('test/testData/Scores.txt', 'test/testData/rank1.txt', true);
+    const sut = scorekeeper('test/testData/Scores.txt', 'test/testData/rank1.txt');
 
     expect(sut).toBeDefined();
     expect(typeof sut).toBe('string');
