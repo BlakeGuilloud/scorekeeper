@@ -1,18 +1,18 @@
 ## Scorekeeper
 [![Build Status](https://travis-ci.org/BlakeGuilloud/scorekeeper.svg?branch=master)](https://travis-ci.org/BlakeGuilloud/scorekeeper)
-[![License](https://img.shields.io/npm/l/scorekeeper.svg)](https://img.shields.io/npm/l/scorekeeper.svg)
-[![npm](https://img.shields.io/npm/v/scorekeeper.svg)](https://img.shields.io/npm/v/scorekeeper.svg)
+[![License](https://img.shields.io/npm/l/scorekeeper.svg)](https://github.com/BlakeGuilloud/scorekeeper/blob/master/LICENSE)
+[![npm](https://img.shields.io/npm/v/scorekeeper.svg)](https://www.npmjs.com/package/scorekeeper)
 
 ### Objective
 Scorekeeper is a CLI tool for parsing through a .txt file of tournament scores, calculating rankings, and writing the rankings to a .txt file. It is designed to accept a single .txt file of game scores as input, and output a .txt file of tournament rankings based on the following scoring format:
-```
+```bash
 Win - 3 Points
 Tie - 1 Point
 Loss - 0 Points
 ```
 
 The input .txt file should resemble the following format:
-```
+```bash
 Falcons 30, Panthers 10
 Green Giants 12, Red Pandas 35
 Gophers 22, Vikings 22
@@ -28,7 +28,7 @@ Vikings 32, Gophers 13
 ```
 
 and output the following:
-```
+```bash
 1. Bears 9
 2. Vikings 7
 3. Panthers 6
@@ -41,7 +41,7 @@ and output the following:
 
 ### Local Development / Demo
 This application is developed using [yarn](https://yarnpkg.com/en/) for package management. Using `npm` for project dependencies has not been tested, but should subsitute just fine.
-```
+```bash
 $ git clone https://github.com/BlakeGuilloud/scorekeeper.git
 
 $ cd scorekeeper && yarn // OR npm install
@@ -52,7 +52,7 @@ $ yarn demo // runs a demonstration of the core-app
 ```
 
 ### Usage
-```
+```bash
 $ npm install -g scorekeeper
 
 $ scorekeeper report <source> <dest>
