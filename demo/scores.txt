@@ -1,8 +1,12 @@
-Falcons 3, Snakes 0
-Diamonds 2, Red Pandas 3
-Gophers 2, Tigers 2
-Lions 1, Bears 2
-Falcons 2, Bears 4
-Red Pandas 1, Snakes 3
-Diamonds 3, Gophers 3
-Tigers 3, Lions 2
+Falcons 30, Panthers 10
+Green Giants 12, Red Pandas 35
+Gophers 22, Vikings 22
+Lions 12, Bears 24
+Falcons 23, Bears 42
+Red Pandas 10, Panthers 30
+Green Giants 13, Gophers 13
+Vikings 32, Lions 23
+Falcons 23, Panthers 30
+Red Pandas 10, Bears 42
+Green Giants 13, Lions 23
+Vikings 32, Gophers 13

@@ -1,6 +1,8 @@
 const scorekeeper = require('../dist');
 
-const filePath = 'scores.txt';
-const fileDest = 'rank1.txt';
+const fileName = 'demo/scores.txt';
+const fileDest = `demo/${Date.now()}-ranks.txt`;
 
-// console.log(scorekeeper(__dirname, filePath, fileDest));
+const rankings = scorekeeper(fileName, fileDest, true);
+
+console.log(rankings); // eslint-disable-line no-console

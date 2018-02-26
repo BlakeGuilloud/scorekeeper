@@ -24,8 +24,8 @@
     "clean": "rimraf dist",
     "demo": "npm run build && node demo/index.js",
     "fix": "eslint ./lib ./test --fix",
-    "test": "jest",
-    "test:watch": "jest --watch",
+    "test": "jest --verbose",
+    "test:watch": "jest --watch --verbose",
     "lint": "eslint ./lib ./test",
     "prepublishOnly": "npm run clean && npm run build"
   },

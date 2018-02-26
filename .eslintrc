@@ -4,6 +4,7 @@
     "describe": true,
     "it": true,
     "expect": true,
+    "afterEach": true,
     "afterAll": true
   }
 }
