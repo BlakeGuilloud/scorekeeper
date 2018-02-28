@@ -51,7 +51,7 @@ $ npm install scorekeeper -g
 Scorekeeper CLI requires a single argument: `<fileName>`, which should be a .txt file representing a list of scores.
 
 ```
-$ scorekeeper Scores.txt
+$ scorekeeper report Scores.txt
 ```
 
 Optional arguments:
@@ -59,7 +59,7 @@ Optional arguments:
 The `-d` flag is used to mark a `<destinationName>`. When provided with a valid input, `-d` will write a report of the tournament rankings to a local file.
 
 ```
-$ scorekeeper Scores.txt -d Rankings.txt
+$ scorekeeper report Scores.txt -d Rankings.txt
 ```
 
 ## Package
