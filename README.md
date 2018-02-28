@@ -3,16 +3,17 @@
 [![License](https://img.shields.io/npm/l/scorekeeper.svg)](https://github.com/BlakeGuilloud/scorekeeper/blob/master/LICENSE)
 [![npm](https://img.shields.io/npm/v/scorekeeper.svg)](https://www.npmjs.com/package/scorekeeper)
 
-### Objective
-Scorekeeper is a CLI tool for parsing through a .txt file of tournament scores, calculating rankings, and writing the rankings to a .txt file. It is designed to accept a single .txt file of game scores as input, and output a .txt file of tournament rankings based on the following scoring format:
-```bash
+
+## Objective
+Scorekeeper is a tool for parsing through a .txt file of tournament scores, calculating rankings, and writing the rankings to a .txt file. It is designed to accept a single .txt file of game scores as input, and output a .txt file of tournament rankings based on the following scoring format:
+```
 Win - 3 Points
 Tie - 1 Point
 Loss - 0 Points
 ```
 
 The input .txt file should resemble the following format:
-```bash
+```
 Falcons 30, Panthers 10
 Green Giants 12, Red Pandas 35
 Gophers 22, Vikings 22
@@ -28,7 +29,7 @@ Vikings 32, Gophers 13
 ```
 
 and output the following:
-```bash
+```
 1. Bears 9
 2. Vikings 7
 3. Panthers 6
@@ -39,21 +40,68 @@ and output the following:
 8. Green Giants 1
 ```
 
-### Local Development / Demo
-This application is developed using [yarn](https://yarnpkg.com/en/) for package management. Using `npm` for project dependencies has not been tested, but should subsitute just fine.
-```bash
-$ git clone https://github.com/BlakeGuilloud/scorekeeper.git
-
-$ cd scorekeeper && yarn // OR npm install
-
-$ yarn test // triggers Jest test suite
-
-$ yarn demo // runs a demonstration of the core-app
+## CLI
+### Installation
+Installing scorekeeper globally maps an executable to the keyword "scorekeeper"
+```
+$ npm install scorekeeper -g
 ```
 
 ### Usage
-```bash
-$ npm install -g scorekeeper
+Scorekeeper CLI requires a single argument: `<fileName>`, which should be a .txt file representing a list of scores.
 
-$ scorekeeper report <source> <dest>
 ```
+$ scorekeeper Scores.txt
+```
+
+Optional arguments:
+
+The `-d` flag is used to mark a `<destinationName>`. When provided with a valid input, `-d` will write a report of the tournament rankings to a local file.
+
+```
+$ scorekeeper Scores.txt -d Rankings.txt
+```
+
+## Package
+### Installation
+```
+$ npm install scorekeeper --save
+```
+
+### Usage
+Using the core package inside of a NodeJS project is easy!
+
+The scorekeeper function accepts a single argument, an `options` Object.
+
+```javascript
+import scorekeeper from 'scorekeeper';
+
+const options = {
+  fileName: 'Scores.txt',
+  destName: 'Rankings.txt', // optional
+};
+
+const rankings = scorekeeper(options);
+
+// `rankings` will be a sorted Array of the tournament standings.
+```
+
+## Demo
+This application is developed using [yarn](https://yarnpkg.com/en/) for package management. Using `npm` for project dependencies has not been tested, but should subsitute just fine.
+
+```
+$ git clone https://github.com/BlakeGuilloud/scorekeeper.git
+
+$ cd scorekeeper && yarn // OR npm install
+```
+
+The core functionality of the application exists in the `/lib` folder of the project.
+
+A demo of the application lives in `/demo`, and can be triggered using the following commands:
+```
+$ yarn demo // Prints tournament rankings from `/demo/scores.txt` to the console
+
+$ yarn demo:write // Writes a .txt file containing tournament rankings to the `/demo` directory.
+```
+
+

@@ -23,6 +23,7 @@
     "build": "babel lib --out-dir dist",
     "clean": "rimraf dist",
     "demo": "npm run build && node demo/index.js",
+    "demo:write": "NODE_ENV=write npm run build && DEMO_ENV=write node demo/index.js",
     "fix": "eslint ./lib ./test --fix",
     "test": "jest --verbose",
     "test:watch": "jest --watch --verbose",

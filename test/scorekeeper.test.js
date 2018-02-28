@@ -8,19 +8,19 @@ describe('scorekeeper', () => {
     fs.unlinkSync(path.resolve(__dirname, 'testData/rank1.txt'));
   });
 
-  it('should require 2 arguments of Type string', () => {
-    expect(scorekeeper('test/testData/Scores.txt', 'test/testData/rank1.txt')).toBeDefined();
+  it('should accept a single Object arugment containing two String properties', () => {
+    expect(scorekeeper({ fileName: 'test/testData/Scores.txt', destName: 'test/testData/rank1.txt' })).toBeDefined();
 
-    expect(() => scorekeeper()).toThrow('Invalid arguments provided.');
+    expect(() => scorekeeper()).toThrow();
     expect(() => scorekeeper(1)).toThrow('Invalid arguments provided.');
-    expect(() => scorekeeper(null, true)).toThrow('Invalid arguments provided.');
+    expect(() => scorekeeper({ destName: true })).toThrow('Invalid arguments provided.');
   });
 
-  it('should return a string of rankings', () => {
-    const sut = scorekeeper('test/testData/Scores.txt', 'test/testData/rank1.txt');
+  it('should return an Array of rankings', () => {
+    const sut = scorekeeper({ fileName: 'test/testData/Scores.txt', destName: 'test/testData/rank1.txt' });
 
     expect(sut).toBeDefined();
-    expect(typeof sut).toBe('string');
-    expect(sut.split('\n').length).toBe(8);
+    expect(Array.isArray(sut)).toBe(true);
+    expect(sut.length).toBe(8);
   });
 });

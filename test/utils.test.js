@@ -87,7 +87,6 @@ describe('writeToFileDest', () => {
       expect(fs.readFileSync('test/testData/test.txt', 'utf8')).toBe('Winter is coming');
     });
   });
-
 });
 
 describe('assignRanks', () => {
