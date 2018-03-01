@@ -48,6 +48,9 @@ $ npm install scorekeeper -g
 ```
 
 ### Usage
+#### report
+`report` is current the only command for the scorekeeper CLI, as it prints, and (optionally) writes the rankings of a tournament.
+
 Scorekeeper CLI requires a single argument: `<fileName>`, which should be a .txt file representing a list of scores.
 
 ```
@@ -93,6 +96,8 @@ This application is developed using [yarn](https://yarnpkg.com/en/) for package 
 $ git clone https://github.com/BlakeGuilloud/scorekeeper.git
 
 $ cd scorekeeper && yarn // OR npm install
+
+$ yarn test // Initiates unit testing written with the Jest library.
 ```
 
 The core functionality of the application exists in the `/lib` folder of the project.
