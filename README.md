@@ -57,6 +57,8 @@ Scorekeeper CLI requires a single argument: `<fileName>`, which should be a .txt
 $ scorekeeper report Scores.txt
 ```
 
+![https://media.giphy.com/media/2aNHzc5rfEb3NJ0wNJ/giphy.gif](https://media.giphy.com/media/2aNHzc5rfEb3NJ0wNJ/giphy.gif)
+
 Optional arguments:
 
 The `-d` flag is used to mark a `<destinationName>`. When provided with a valid input, `-d` will write a report of the tournament rankings to a local file.
@@ -64,6 +66,8 @@ The `-d` flag is used to mark a `<destinationName>`. When provided with a valid 
 ```
 $ scorekeeper report Scores.txt -d Rankings.txt
 ```
+
+![https://media.giphy.com/media/3ixRqeUj42MOEeqHAa/giphy.gif](https://media.giphy.com/media/3ixRqeUj42MOEeqHAa/giphy.gif)
 
 ## Package
 ### Installation
